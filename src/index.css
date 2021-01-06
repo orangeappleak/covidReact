@@ -1,13 +1,174 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://rsms.me/inter/inter.css');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#main_heading{
+    padding: 50px;
+    background-color: #1f1f1f;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+#covid_brief{
+    display: flex;
+    align-items: center;
+    background-color: #1f1f1f;
+}
+
+#brief_info{
+    margin: 20px;
+    flex: 2;
+}
+
+#brief_info h1{
+    font-size: 100px;
+    color: white;
+    font-family: 'inter';
+}
+
+#brief_info p{
+    font-size: 20px;
+    font-family:  'Roboto Mono';
+    text-align: justify;
+    color: white;
+}
+
+#covid_info{
+    padding: 30px;
+    background-color: #464646;
+    border-radius: 100px;
+    flex: 1;
+    margin: 40px;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+#covid_info h1{
+    font-size: 20px;
+    font-family: 'Roboto Mono';
+}
+
+#cards{
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 30% 30%;
+    grid-template-rows: auto auto;
+    column-gap: 90px;
+    row-gap: 100px;
+    justify-content: center;
+
+    align-items: center;
+}
+
+#cards h1{
+    font-size: 50px;
+    font-family: Helvetica;
+    text-align: center;
+}
+
+#card{
+    height: auto;
+    border-radius: 80px;
+    color: white;
+    background-color: #1f1f1f;
+    transform: scale(1);
+    box-shadow: 0px 0px 0px 0px grey;
+    transition: transform 0.3s ease-in-out,box-shadow 0.3s ease-in-out;
+}
+
+#card:hover{
+    box-shadow: 0px 0px 20px 10px rgba(137, 136, 136, 0.626);
+    transform: scale(1.1);
+}
+
+#card h2{
+    font-size: 30px;
+    font-family: Helvetica;
+    text-align: center;
+    margin: 20px;
+}
+
+#card_info{
+    text-align: center;
+    font-size: 15px;
+    margin: 30px;
+    font-family: Helvetica;
+}
+
+#card_info h3{
+    margin: 10px;
+}
+
+#numbers{
+    color: red;
+}
+
+#recovered{
+    color: rgb(72, 255, 72);
+}
+
+
+#footer{
+    background-color: #1f1f1f;
+    color: white;
+    margin-top: 50px;
+    text-align: center;
+    font-family: 'inter';
+    font-size: 10px;
+    padding: 20px;
+}
+
+@media screen and (min-width: 400px) and (max-width: 600px){
+
+    #covid_brief{
+        flex-direction: column;
+    }
+
+    #brief_info h1{
+        font-size: 60px;
+        margin: 30px;
+    }
+    
+    #brief_info p{
+        font-size: 20px;
+        margin: 30px;
+    }
+
+    #covid_info{
+        border-radius: 20px;
+        border: 10px solid rgb(130, 130, 130);
+        padding: 5px;
+    }
+
+    #covid_info h1{
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 20px;
+        color: yellow;
+        margin-top: 10px;
+    }
+
+    
+    #cards{
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #card{
+        height: auto;
+        border-radius: 10px;
+        color: white;
+        background-color: #1f1f1f;
+    }
 }
